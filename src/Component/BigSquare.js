@@ -1,10 +1,17 @@
 import SmallSquare from './SmallSquare';
 
-const BigSquare = ({ squares, onClick }) => (
+const BigSquare = ({ squares, onClick, colored }) => (
   <div className="board">
-    {squares.map((square, i) => (
-      <SmallSquare key={i} value={square} onClick={() => onClick(i)} />
-    ))}
+    {squares.map((square, i) => {
+      return (
+        <SmallSquare
+          key={i}
+          value={square}
+          colored={colored.includes(i)}
+          onClick={() => onClick(i)}
+        />
+      );
+    })}
   </div>
 );
 

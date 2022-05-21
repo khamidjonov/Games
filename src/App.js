@@ -1,10 +1,15 @@
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import MainGame from './Component/MainGame';
+import ListItem from './Rock-Scissors-Paper-Game/ListItem';
 
 function App() {
   return (
-    <>
-      <MainGame />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainGame />} />
+        <Route path="/second-game" element={<ListItem />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

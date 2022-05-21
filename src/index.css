@@ -89,6 +89,25 @@ h1 ~ h3 {
   color: yellow;
 }
 
+.colored {
+  background-color: #0336ff;
+}
+
+.link {
+  border: rgba(50, 50, 50, 0.8) solid 2px;
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: #979797;
+  color: #272727;
+}
+
 @media only screen and (max-width: 600px) {
    
   h1 {
@@ -120,5 +139,127 @@ h1 ~ h3 {
   
   .squares:hover {
     border: 2px solid white;
+  }
+}
+
+/* For second game */
+
+.container-second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-container {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-container button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+
+.icon {
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+
+}
+
+.items-container + .choosen-container {
+  margin-top: 50px;
+}
+
+.choosen-container {
+  margin-top: 20px;
+  font-size: 20px;
+  width: 400px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.9s ease;
+}
+
+.choosen-container .icon {
+  font-size: 24px;
+}
+
+.choosen-container .icon:hover {
+  transform: scale(1);
+}
+
+.btn-restart {
+  background-color: rgb(115, 137, 168);
+  margin-top: 30px;
+  width: 80px;
+  height: 30px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-restart:hover {
+  background-color: rgb(210, 210, 210);
+  
+}
+
+.btn-restart:active {
+  transform: scale(0.96);
+}
+
+@media screen and (max-width: 600px) {
+  .items-container {
+    width: 100px;
+  }
+  
+  .items-container button {
+    font-size: 16px;
+  }
+  
+  .small-container {
+    flex-direction: column;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-right: 8px;
+  }
+  
+  .items-container + .choosen-container {
+    margin-top: 40px;
+  }
+  
+  .choosen-container {
+    margin-top: 14px;
+    font-size: 14px;
+    width: 200px;
+  }
+  
+  .choosen-container .icon {
+    font-size: 16px;
+  }
+
+  
+  .btn-restart {
+    margin-top: 30px;
+    width: 50px;
+    height: 20px;
+    border-radius: 3px;
+    font-size: 0.8rem;
   }
 }
